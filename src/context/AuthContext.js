@@ -58,6 +58,7 @@ const signin =
       dispatch({ type: "signin", payload: response.data.token });
       navigate("TrackList");
     } catch (err) {
+      console.log(err);
       dispatch({
         type: "add_error",
         payload: "Something went wrong with sign in",
